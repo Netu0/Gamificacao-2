@@ -31,8 +31,32 @@ namespace eRoupas.Model
         public string Marca { get; set; } = string.Empty;
     }
 
+    public class Sapato : Produto
+    {
+        public string Tamanho { get; set; } = string.Empty;
+        public string Cor { get; set; } = string.Empty;
+        public string Marca { get; set; } = string.Empty;
+    }
+
+    public class Bolsa : Produto
+    {
+        public string Tamanho { get; set; } = string.Empty;
+        public string Cor { get; set; } = string.Empty;
+        public string Marca { get; set; } = string.Empty;
+    }
+
     abstract class Acessorio
     {
         
+    }
+
+    enum CategoriaProduto
+    {
+        Camisa,
+        Calca,
+        Vestido,
+        Sapato,
+        Bolsa,
+        Acessorio
     }
 }
