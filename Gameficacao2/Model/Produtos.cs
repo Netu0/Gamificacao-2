@@ -23,4 +23,9 @@ namespace eRoupas.Model
         public string Cor { get; set; } = string.Empty;
         public string Marca { get; set; } = string.Empty;
     }
+
+    abstract class Acessorio
+    {
+        
+    }
 }
