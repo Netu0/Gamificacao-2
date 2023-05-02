@@ -1,14 +1,24 @@
-/*using System;
+using System;
 using CarrinhoCompras;
 using eRoupas.Model;
 
-namespace Carrinho.UI
+namespace eRoupas.UI
 {
-
-    class ClienteUI
+    class CarroUI
     {
         public void submenu()
         {
+            
+            List<ProdutoModel> produtos = new List<ProdutoModel>
+            {
+                new Camisa { Nome = "Camisa Azul", Preco = 50.00, Cor = "Azul", Tamanho = "M", Marca = "Marca A" },
+                new Camisa { Nome = "Camisa Vermelha", Preco = 60.00, Cor = "Vermelho", Tamanho = "G", Marca = "Marca B" },
+                new Calca { Nome = "Calça Jeans", Preco = 80.00, Cor = "Azul", Tamanho = "40", Marca = "Marca C" },
+                new Vestido { Nome = "Vestido Preto", Preco = 100.00, Cor = "Preto", Tamanho = "P", Marca = "Marca D" }
+            };
+
+            CarrinhoComprar carrinho = new CarrinhoComprar(produtos);
+
             int menu;
 
             do
@@ -24,10 +34,10 @@ namespace Carrinho.UI
                 switch (menu)
                 {
                     case 1:
-                        AdicionarProduto();
+                        carrinho.AdicionarAoCarrinho("Camisa Azul");
                         break;
                     case 2:
-                        ListarProdutos();
+                        carrinho.MostrarCarrinho();
                         break;
 
                     case 0:
@@ -40,31 +50,6 @@ namespace Carrinho.UI
 
             } while (menu != 0);
         }
-        public decimal Total
-        {
-            get
-            {
-                decimal total = 0m;
-                foreach (var produto in Produtos)
-                {
-                    total += produto.CalcularPreco();
-                }
-                return total;
-            }
-        }
-
-        public void AdicionarProduto(Produto produto)
-        {
-            produtos.Add(produto);
-        }
-
-        public void ListarProdutos()
-        {
-            Console.WriteLine("Produtos no carrinho:");
-            foreach (var produto in produtos)
-            {
-                Console.WriteLine($"{produto.Nome}: R${produto.CalcularPreco()}");
-            }
-        }
+        
     }
-}*/
+}

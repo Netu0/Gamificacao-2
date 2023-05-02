@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using eRoupas.Model;
 using eRoupas.UI;
 
-namespace eRoupas.Model
+namespace eRoupas.UI
 {
     class FuncionarioUI
     {

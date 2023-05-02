@@ -1,35 +1,31 @@
 using System;
+using eRoupas.Model;
 
-namespace eRoupas.Model
+namespace eRoupas.UI
 {
     class ClienteUI
     {
         public void submenu()
         {
+
+            CarroUI carro = new CarroUI();
+
             int menu;
 
             do{
 
                 Console.WriteLine("/// Menu cliente ///");
-                Console.WriteLine("1 - Exibir catálogo");
-                Console.WriteLine("2 - Adicionar ao carrinho");
-                Console.WriteLine("3 - Exibir carrinho");
-                Console.WriteLine("4 - Finalizar compra");
-                Console.WriteLine("0 - Log out");
+                Console.WriteLine("1 - Carrinho de compras");
+                Console.WriteLine("2 - Finalizar compra");
+                Console.WriteLine("0 - Sair");
 
                 menu = Convert.ToInt32(Console.ReadLine());
 
                 switch(menu){
                     case 1:
-                        
+                        carro.submenu();
                         break;
                     case 2:
-                        
-                        break;
-                    case 3:
-                        
-                        break;
-                    case 4:
                         
                         break;
                     case 0:
