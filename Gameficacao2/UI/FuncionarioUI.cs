@@ -17,7 +17,7 @@ namespace eRoupas.Model
 
             do{
 
-                Console.WriteLine("/// Menu Funcioanrio ///");
+                Console.WriteLine("/// Menu Funcionario ///");
                 Console.WriteLine("1 - Registrar produto");
                 Console.WriteLine("0 - Log out");
 

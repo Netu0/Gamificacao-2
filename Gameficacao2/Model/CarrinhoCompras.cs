@@ -1,83 +1,47 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using eRoupas.Model;
-using eRoupas.UI;
-//falta dos a using enums
 
-/*
 namespace CarrinhoCompras
 {
-        public class CarrinhoCompras
+    public abstract class Produto
     {
-        
-    public long CompraProdutoID { get; set; }
-    public ProdutoModel? Produto { get; set; }
-    public double Quantidade { get; set; }
-    public double PrecoUnitario { get; set; }
+        public string Nome { get; set; }
+        public decimal Preco { get; set; }
 
-    public double Subtotal
-    {
-        get { return Quantidade * PrecoUnitario; }
+        public abstract decimal CalcularPreco();
     }
-        
 
+    public class ProdutoComDesconto : Produto
+    {
+        public decimal Desconto { get; set; }
 
-        public List<ProdutoModel> Produtos { get; set; } = new List<ProdutoModel>();
-
-        public List<Promocao> Promocoes { get; set; } = new List<Promocao>();
-
-        public void addProduto(ProdutoModel produto)
+        public override decimal CalcularPreco()
         {
-            Produtos.Add(produto);
+            return Preco * (1 - Desconto);
+        }
+    }
+
+        public class CarrinhoDeCompras
+        {
+        private List<Produto> produtos = new List<Produto>();
+
+        public List<Produto> Produtos
+        {
+            get { return produtos; }
         }
 
-        public void exibirProduto()
+        public decimal Total
         {
-            foreach (var produto in Produtos)
+            get
             {
-                Console.WriteLine($"Nome: {produto.Nome} | Preco: {produto.Preco} ");
-            }
-        }
-
-        public decimal valorTotal()
-        {
-            double valorTotal = Produtos.Sum(produto => produto.Preco);
-            foreach (var promocao in Promocao)
-            {
-                if (promocao.desconto == desconto.%)
+                decimal total = 0m;
+                foreach (var produto in produtos)
                 {
-                    valorTotal -= (promocao.desconto / 100 * valorTotal);
+                    total += produto.CalcularPreco();
                 }
-                else
-                {
-                    valorTotal -= promocao.desconto;
-
-                }
+                return total;
             }
-
-            return valorTotal;
-
-            public void AplicarPromocao(Promocao promocao)
-            {
-                Console.WriteLine("contador = ");
-                foreach (var produto in Produtos)
-                {
-
-                    Console.WriteLine("entrou");
-                    if (promocao.Produtos.Contains(produto))
-                    {
-                        Console.WriteLine("val desc=" + promocao.ValorDesconto);
-                        produto.Desconto = promocao.ValorDesconto;
-                    }
-                }
-            }
-
-
         }
 
     }
 }
-*/

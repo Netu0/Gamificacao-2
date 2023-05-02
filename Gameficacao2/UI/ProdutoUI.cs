@@ -17,7 +17,7 @@ namespace eRoupas.UI
                 Console.WriteLine("1 - Novo produto");
                 Console.WriteLine("2 - Novo acessorio");
                 Console.WriteLine("3 - Listar produtos");
-                Console.WriteLine("0 - Log out");
+                Console.WriteLine("0 - Voltar");
 
                 menu = Convert.ToInt32(Console.ReadLine());
 
