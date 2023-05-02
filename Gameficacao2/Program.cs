@@ -9,31 +9,27 @@ namespace eRoupas
     {
         static void Main(string[] args)
         {
+
+            FuncionarioUI funcionario = new FuncionarioUI();
+            ClienteUI cliente = new ClienteUI();
+
             int menu;
 
             do{
 
-                Console.WriteLine("/// Menu Principal ///");
-                Console.WriteLine("1 - Adicionar ao carrinho");
-                Console.WriteLine("2 - Carrinho de compras");
-                Console.WriteLine("3 - Adicionar cupom");
-                Console.WriteLine("4 - Pagamento");
+                Console.WriteLine("/// Log In ///");
+                Console.WriteLine("1 - Cliente");
+                Console.WriteLine("2 - Funcionário");
                 Console.WriteLine("0 - Sair");
 
                 menu = Convert.ToInt32(Console.ReadLine());
 
                 switch(menu){
                     case 1:
-                        Console.WriteLine("/// Adicionar ao carrinho ///");
+                        cliente.submenu();
                         break;
                     case 2:
-                        Console.WriteLine("/// Carrinho de compras ///");
-                        break;
-                    case 3:
-                        Console.WriteLine("/// Adicionar cupom ///");
-                        break;
-                    case 4:
-                        Console.WriteLine("/// Pagamento ///");
+                        funcionario.submenu();
                         break;
                     case 0:
                         Console.WriteLine("/// Sair ///");

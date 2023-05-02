@@ -1,11 +1,18 @@
 using System;
+using System.Collections.Generic;
+using eRoupas.Model;
+using eRoupas.UI;
 
 namespace eRoupas.Model
 {
     class FuncionarioUI
     {
-        private void submenu()
+        public void submenu()
         {
+
+            List<ProdutoModel> produtos = new List<ProdutoModel>();
+            ProdutoUI produto = new ProdutoUI(produtos);
+
             int menu;
 
             do{
@@ -18,7 +25,7 @@ namespace eRoupas.Model
 
                 switch(menu){
                     case 1:
-                        
+                        produto.submenu();
                         break;
                     case 0:
                         Console.WriteLine("Retornando ...");

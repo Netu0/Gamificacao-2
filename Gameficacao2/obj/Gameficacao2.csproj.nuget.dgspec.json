@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\isabe\\Desktop\\Projects\\POO\\Gameficacao2\\Gameficacao2\\Gameficacao2.csproj": {}
+    "C:\\Users\\isabe\\Desktop\\Gamificacao-2\\gameficacao2\\Gameficacao2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\isabe\\Desktop\\Projects\\POO\\Gameficacao2\\Gameficacao2\\Gameficacao2.csproj": {
+    "C:\\Users\\isabe\\Desktop\\Gamificacao-2\\gameficacao2\\Gameficacao2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\isabe\\Desktop\\Projects\\POO\\Gameficacao2\\Gameficacao2\\Gameficacao2.csproj",
+        "projectUniqueName": "C:\\Users\\isabe\\Desktop\\Gamificacao-2\\gameficacao2\\Gameficacao2.csproj",
         "projectName": "Gameficacao2",
-        "projectPath": "C:\\Users\\isabe\\Desktop\\Projects\\POO\\Gameficacao2\\Gameficacao2\\Gameficacao2.csproj",
+        "projectPath": "C:\\Users\\isabe\\Desktop\\Gamificacao-2\\gameficacao2\\Gameficacao2.csproj",
         "packagesPath": "C:\\Users\\isabe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\isabe\\Desktop\\Projects\\POO\\Gameficacao2\\Gameficacao2\\obj\\",
+        "outputPath": "C:\\Users\\isabe\\Desktop\\Gamificacao-2\\gameficacao2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\isabe\\AppData\\Roaming\\NuGet\\NuGet.Config",

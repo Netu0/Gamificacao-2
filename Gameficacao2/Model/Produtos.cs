@@ -2,7 +2,7 @@ using System;
 
 namespace eRoupas.Model
 {
-	public class Produto
+	public abstract class ProdutoModel
 	{
         public long? ProdutoID { get; set; }
         public string Nome { get; set; } = string.Empty;
@@ -10,35 +10,35 @@ namespace eRoupas.Model
         
     }
 
-    public class Camisa : Produto
+    public class Camisa : ProdutoModel
     {
         public string Tamanho { get; set; } = string.Empty;
         public string Cor { get; set; } = string.Empty;
         public string Marca { get; set; } = string.Empty;
     }
 
-    public class Calca : Produto
+    public class Calca : ProdutoModel
     {
         public string Tamanho { get; set; } = string.Empty;
         public string Cor { get; set; } = string.Empty;
         public string Marca { get; set; } = string.Empty;
     }
 
-    public class Vestido : Produto
+    public class Vestido : ProdutoModel
     {
         public string Tamanho { get; set; } = string.Empty;
         public string Cor { get; set; } = string.Empty;
         public string Marca { get; set; } = string.Empty;
     }
 
-    public class Sapato : Produto
+    public class Sapato : ProdutoModel
     {
         public string Tamanho { get; set; } = string.Empty;
         public string Cor { get; set; } = string.Empty;
         public string Marca { get; set; } = string.Empty;
     }
 
-    public class Bolsa : Produto
+    public class Bolsa : ProdutoModel
     {
         public string Tamanho { get; set; } = string.Empty;
         public string Cor { get; set; } = string.Empty;

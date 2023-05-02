@@ -4,7 +4,7 @@ namespace eRoupas.Model
 {
     class ClienteUI
     {
-        private void submenu()
+        public void submenu()
         {
             int menu;
 
